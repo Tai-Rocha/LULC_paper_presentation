@@ -1,0 +1,733 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+  <head>
+    <title>Global land-use and land-cover (LULC) data</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="  " />
+    <script src="libs/header-attrs-2.10/header-attrs.js"></script>
+    <link href="libs/remark-css-0.0.1/default.css" rel="stylesheet" />
+    <link href="libs/remark-css-0.0.1/default-fonts.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/custom-intro.css" type="text/css" />
+  </head>
+  <body>
+    <textarea id="source">
+class: center, middle, inverse, title-slide
+
+# Global land-use and land-cover (LULC) data
+## Tainá Rocha
+### <img src = 'https://github.com/Tai-Rocha/tainaweb_en/raw/main/content/talk/LULC%20data/featured.jpg' width = '30%'> <br>
+### September 2021
+
+---
+
+
+
+
+
+About me 👩‍🎓
+ - [Biologist](#academic_1) [UFPA](https://portal.ufpa.br/) 
+ - [MSc. Environmental biology](academic_2) [IECOS](https://www.museu-goeldi.br/)
+ - [PhD Zoology](academic_3) [MPEG](https://www.museu-goeldi.br/)
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+
+--
+&gt; ## ... Biodiversity distribution patterns
+---
+name: sumario
+
+## Land-use land-cover (LULC)
+
+&lt;img src="img/paper.png" width="80%" style="display: block; margin: auto;" /&gt;
+---
+## Land-use land-cover (LULC)
+- [Important predictors of species occurrence](#pre-requisitos)
+
+- [One of the main drivers of environmental change at multiple scales](#projetos-rstudio)
+
+--
+## Thus...
+Mapping land-use land-cover (LULC) changes through time is, therefore, important and desirable to predict these threats and propose effec tive conservation policies
+---
+
+---
+name: sumario
+
+## Land-use land-cover (LULC)
+- [Ecological niche models (as predictor or pos processing analysis)](#pre-requisitos)
+
+- [Ecosystem services (InVEST modeling tool)](#projetos-rstudio)
+---
+class: middle
+
+## LULC Datsets 
+
+&gt; ### ... Many products. But there is gap of time series that covers... . 
+--
+
+#### É a coisa mais útil/interessante que eu (Bea) aprendi nos últimos meses 🚀
+
+--
+
+#### Desde que aprendi eu (Julio) uso em quase todos os projetos 🤖
+
+---
+
+
+.pull-left[
+
+## Conhecimentos úteis
+
+#### Git e GitHub &lt;i class="fab fa-github"&gt;&lt;/i&gt;
+
+#### Pacotes em R 📦
+
+#### Testes unitários &lt;i class="fas fa-mitten"&gt;&lt;/i&gt; *
+.footnote[*(caso queira executar os testes, e fazer a avaliação da cobertura)]
+
+- [Nos slides finais](#referencias), tem referências de cada um destes assuntos! 📚
+
+]
+
+--
+
+.pull-right[
+## Alinhamentos:
+
+- Atividade expositiva
+
+- [Material do curso de Pacotes](https://curso-r.github.io/main-pacotes/slides/index.html) da [Curso-R](https://curso-r.com/)
+
+
+- [Material sobre como usar Git e GitHub no RStudio](https://beatrizmilz.com/talk/2021-git-e-github-gyn/)
+]
+
+
+
+---
+name: pre-requisitos
+
+## Pré-requisitos para criar pacotes
+
+
+- [R](https://livro.curso-r.com/1-1-instalacao-do-r.html) e [RStudio](https://livro.curso-r.com/1-1-instalacao-do-r.html) instalados
+
+- [Ferramentas de desenvolvimento](https://r-pkgs.org/setup.html#setup-tools):
+
+  - Windows: [RTools instalado](https://livro.curso-r.com/1-3-instalacao-adicionais.html#rtools)
+  
+  - Linux: [r-base-dev](https://livro.curso-r.com/1-3-instalacao-adicionais.html#rtools)
+  
+  - MacOS: Xcode command line tools
+
+
+```r
+devtools::has_devel()
+```
+
+```
+#&gt; Your system is ready to build packages!
+```
+
+---
+## Pré-requisitos
+
+- [Pacotes necessários instalados](https://github.com/curso-r/main-pacotes#pacotes-necess%C3%A1rios)
+
+
+
+```r
+pacotes &lt;- c(
+  "devtools",
+  "usethis",
+  "knitr"
+) 
+
+install.packages(pacotes)
+```
+
+
+- [Git instalado](https://git-scm.com/)
+
+- [Conta no GitHub criada](https://github.com/)
+
+---
+class: middle, center
+
+## A ferramenta da produtividade: usethis
+
+&lt;img src="https://raw.githubusercontent.com/allisonhorst/stats-illustrations/master/rstats-artwork/usethis.png" width="70%" style="display: block; margin: auto;" /&gt;
+
+
+---
+name: projetos-rstudio
+class: middle, center, inverse
+
+## Projetos no RStudio
+
+---
+## Projetos no RStudio
+
+Uma funcionalidade muito importante do RStudio é a possibilidade de criar **projetos**. 
+
+Um projeto é uma pasta no seu computador. Nessa pasta, estarão todos os arquivos que você usurá ou criará na sua análise. 
+
+A principal razão de utilizarmos projetos é **organização**. Com eles, fica muito mais fácil importar bases de dados para dentro do R, criar análises reprodutíveis e compartilhar o nosso trabalho.
+
+&lt;br&gt;
+
+&gt; Habitue-se desde a cedo a criar um projeto para cada nova análise que for fazer.
+
+---
+
+### Criando um projeto no RStudio
+
+Para criar um projeto, clique em `New Project...` no Menu `File`. Na caixa de diálogo que aparecerá, clique em `New Directory` para criar o projeto em uma nova pasta ou `Existing Directory` para criar em uma pasta existente. 
+
+Se você tiver o `Git` instalado, você também pode usar projetos para conectar com repositórios do Github e outras plataformas de desenvolvimento. Para isso, basta clicar em `Version Control`.
+
+Criando um projeto, o RStudio criará na pasta escolhida um arquivo `nome-do-projeto.Rproj`. Você pode usar esse arquivo para iniciar o RStudio já com o respectivo projeto aberto.
+
+---
+### RStudio com um projeto aberto
+
+&lt;img src="img/exemplo-projeto-aberto.png" width="80%" style="display: block; margin: auto;" /&gt;
+
+---
+### Navegando entre projetos
+
+&lt;img src="img/exemplo-lista-projetos.png" width="80%" style="display: block; margin: auto;" /&gt;
+
+
+---
+name: basico-pacotes
+class: middle, center, inverse
+
+## Estrutura básica de um pacote em R
+
+
+---
+## Pacotes
+
+Um pacote do R é uma forma específica de organizar seus código, seguindo o protocolo descrito pela R Foundation:
+
+&gt; _Pacotes são a unidade fundamental de código R reprodutível._
+&gt; 
+&gt; — Wickham &amp; Bryan
+
+.pull-left[
+- Pacotes incluem: 
+  - Funções em R
+  - Documentação sobre como usá-las
+  - Testes
+  - Dados de exemplo
+]
+
+.pull-right[
+&lt;img src="img/pacote.gif" style="display: block; margin: auto;" /&gt;
+]
+
+
+---
+## Criando um pacote
+
+Para criar um pacote, usamos a função `usethis::create_package()`
+
+- Você deve passar um caminho como `~/Documents/meupacote` e uma nova pasta chamada `meupacote` será criada dentro da pasta `Documents`. Essa pasta será tanto um `Rproj` quanto um pacote, ambos chamados `meupacote`
+
+&gt; - **Dica geral:** não adicione acentos, caracteres especiais e espaços no nome dos caminhos, arquivos, funções, pacotes, etc.
+
+
+```r
+usethis::create_package("~/Documents/meupacote")
+```
+
+
+---
+## Estrutura básica do pacote
+
+Essa é a estrutura criada quando usamos a função `usethis::create_package()`:
+
+- `meupacote.Rproj`: este arquivo faz com que este diretório seja um projeto no RStudio (RStudio Project)
+
+
+- `DESCRIPTION`: define o nome, descrição, versão, licença, dependências e outras caracaterísticas do seu pacote
+
+- `R/`: aqui ficam as funções desenvolvidas em R
+
+- `.Rbuildignore`:  Lista arquivos que não devem ser incluídos ao compilar o pacote R a partir do código-fonte
+&lt;!-- usethis::use_build_ignore("..") ajuda a adicionar arquivos no .Rbuildignore--&gt;
+
+- `NAMESPACE`: Não devemos editar este arquivo manualmente. Ele declara as funções que o pacote exporta para uso externo e as funções externas que seu pacote importa de outros pacotes
+
+---
+## A pasta R/
+
+Dentro de um pacote, a pasta `R/` só pode ter arquivos R com funções.
+
+- Uma função é responsável por executar uma tarefa pequena, mas muito bem. Quando trabalhamos com funções, nossas operações ficam mais confiáveis.
+
+- A ideia da pasta `R/` é guardar em um local comum tudo aquilo que nós utilizamos como ferramenta interna para nossas análises, bem como aquilo que queremos que outras pessoas possam usar no futuro.
+
+- Podemos usar `usethis::use_r("nome-do-arquivo")` para que um arquivo seja criado antes começarmos a escrever uma função.
+
+- Assim que escrevermos/modificarmos alguma função, podemos carregá-las com `devtools::load_all()` e executá-las manualmente
+
+---
+## Dependências
+
+Quando lidamos com pacotes, a função `library()` não pode ser utilizada, e todas as funções devem ter seus pacotes de origem explicitamente referenciados pelo operador `::`.
+
+- `usethis::use_package()`: adiciona pacotes que foram instalados via CRAN
+  
+- `usethis::use_dev_package()`: adiciona pacotes que não foram instalados via CRAN
+  
+- `usethis::use_pipe()`: use quando você usa o pipe do magrittr.
+
+- Para escrever `dplyr::`, por exemplo, basta digitar `d`, `p`, `l` e apertar TAB uma vez. Com os `::`, as sugestões passarão a ser somente de funções daquele pacote.
+
+
+---
+
+## Etapas iniciais
+
+- Criar um pacote usando a função `usethis::create_package("~/caminho/ate/o/nomepacote")`
+
+- No arquivo DESCRIPTION, adicionar o nome de quem criou o pacote, além do título e descrição do pacote.
+
+- Adicionar uma licença com `usethis::use_**_licence()`
+
+- Versionar o projeto usando `usethis::use_git()`
+
+- Crie um repositório no GitHub onde esse pacote será versionado utilizando `usethis::use_github()`
+
+- Crie uma função com `usethis::use_r("nome-funcao")`
+
+---
+
+## Funções para repetir com frequência
+
+
+- `devtools::document()`: atualiza a documentação e o arquivo NAMESPACE
+
+- `devtools::load_all()`: carrega as funções do pacote, que ficam disponíveis para uso
+
+- `devtools::check()`: verifica se o pacote está funcionando. Ela carrega todo o código, gera toda a documentação e executa todos os testes, verificando em todo passo se tudo está funcionando como o esperado. Pode apresentar erros, avisos e notas. Leia as mensagens no console :) 
+
+---
+
+# Vamos criar um pacote no R!
+
+&lt;img src="img/cat.gif" style="display: block; margin: auto;" /&gt;
+
+
+---
+name: revisao-github
+class: inverse, middle, center
+
+## Revisão sobre Git e GitHub
+
+&lt;div class="figure" style="text-align: center"&gt;
+&lt;img src="img/meme-git.png" alt="Fonte: &amp;lt;a href='https://www.instagram.com/p/CTxBAC0rv3Z/'&amp;gt;Faxineiro de Dados&amp;lt;/a&amp;gt;" width="40%" /&gt;
+&lt;p class="caption"&gt;Fonte: &lt;a href='https://www.instagram.com/p/CTxBAC0rv3Z/'&gt;Faxineiro de Dados&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;
+
+---
+
+## O que é Git?
+
+- Git é um **sistema de versionamento**,  que é capaz de guardar o histórico de alterações de todos os arquivos dentro de uma pasta, que chamamos de repositório.
+
+
+- Torna-se importante à medida que seu trabalho é __colaborativo__.
+
+- Git é um software que você instala no computador.
+
+
+&lt;img src="https://git-scm.com/images/logo@2x.png" width="30%" style="display: block; margin: auto;" /&gt;
+
+---
+
+## O que é GitHub?
+
+
+- GitHub é um site para compartilhar repositórios Git.
+
+- Utilizado por milhões de pessoas em projetos de código aberto ou fechado.
+
+- Útil para colaborar com outras pessoas programadoras em projetos de ciência de dados.
+
+- Existem alternativas, como [GitLab](https://about.gitlab.com/) e [BitBucket](https://bitbucket.org/product).
+
+- GitHub é um site que você acessa na internet.
+
+- [GitHub percente à Microsoft desde 2018](https://g1.globo.com/economia/tecnologia/noticia/microsoft-compra-github-por-us-75-bilhoes.ghtml).
+
+&lt;img src="img/github.png" width="30%" style="display: block; margin: auto;" /&gt;
+
+---
+
+## Usando Git e GitHub 
+
+- [Saiba como configurar o GitHub no RStudio nessa apresentação](https://beatrizmilz.com/talk/2021-git-e-github-gyn/)
+
+- O pacote [`usethis`](https://usethis.r-lib.org/) apresenta várias funções úteis.
+
+- Cada pacote deve estar vinculado à um projeto no RStudio `.RProj`, e também a um repositório no GitHub.
+
+- Lembre-se das funções:
+
+
+```r
+usethis::use_git() # para iniciar o versionamento do projeto com Git 
+# (a partir deste momento podemos chamar de repositório!)
+
+usethis::use_github() # para vincular esse repositório com o GitHub
+```
+
+---
+
+# Vamos colocar nosso pacote no GitHub!
+
+&lt;img src="img/cat.gif" style="display: block; margin: auto;" /&gt;
+
+---
+name: gha
+class: middle, center, inverse
+## O que é integração contínua e GitHub Actions?
+
+---
+## Integração contínua
+
+- Dado um certo código e um método consistente de testá-lo, faz todo sentido
+**automatizar** o processo
+
+- Integração contínua normalmente envolve garantir que a versão mais
+recente do software está atendendo os padrões de qualidade.
+    
+- Serve para responder perguntas do tipo:
+  - O seu código funciona em máquinas diferentes?
+  - Uma mudança no código quebrou alguma coisa?
+
+- Existem algumas alternativas, como [Circle](https://circleci.com), [Travis](https://travis-ci.org) e [AppVeyor](https://appveyor.com). 
+
+- Hoje vamos falar sobre o **GitHub Actions** porque ele se conecta facilmente
+com o GitHub
+
+---
+## Integração contínua
+
+.pull-left[
+
+- Vários pacotes usam para fazer executar o check e testes: [{readr}](https://github.com/tidyverse/readr/tree/master/.github/workflows), [{dplyr}](https://github.com/tidyverse/dplyr/tree/master/.github/workflows), [{usethis}](https://github.com/r-lib/usethis/tree/master/.github/workflows), e muitos outros
+
+- Pacote [{mananciais}](https://beatrizmilz.github.io/mananciais/) - atualiza diariamente a base de dados 
+
+- Página [Materiais sobre R](https://materiais-estudo-r.netlify.app/) - atualiza o site sempre que há mudança na base de dados
+
+- Os pacotes mais bem feitos da Curso-R também utilizam: [{chess}](https://github.com/curso-r/chess) e [{stockfish}](https://github.com/curso-r/stockfish)
+
+]
+
+.pull-right[
+
+&lt;br&gt;&lt;br&gt;
+
+&lt;img src="https://avatars.githubusercontent.com/u/44036562?s=200&amp;v=4" style="display: block; margin: auto;" /&gt;
+
+]
+
+---
+## GitHub Actions
+
+&gt; GitHub Actions ajuda a automatizar tarefas dentro de seu ciclo de vida de
+desenvolvimento de software https://docs.github.com/pt/actions
+
+- Um **workflow** é processo bem-definido que será executado no
+repositório ao qual ele pertence
+
+- Ele é definido a partir de um arquivo YAML dentro da pasta `.github/workflows`
+
+  - É comum definir workflows para testagem de pacotes, geração de documentação, 
+  atualização de dados, etc.
+  
+- O workflow é, essencialmente, um duende mágico que baixa o nosso repositório
+em um **servidor do GitHub** e executa os comandos especificados
+
+  - O plano gratuito já funciona para bastante coisa, mas cuidado com os
+  **custos** das máquinas MacOS
+
+---
+
+## Fluxos de trabalho (workflows)
+
+&lt;!-- - Os arquivos .yaml que armazenam informações os fluxos de trabalho, onde estão descritos os eventos e trabalhos. --&gt;
+
+&lt;img src="img/explicacao_workflows.png" width="45%" style="display: block; margin: auto;" /&gt;
+
+Diagrama feito utilizando o site [draw.io](https://draw.io)  e [Carbon](https://carbon.now.sh/). Código de [r-lib/actions](https://github.com/r-lib/actions/tree/master/examples#quickstart-ci-workflow).
+
+???
+
+Os arquivos .yaml armazenam informações os fluxos de trabalho, onde estão descritos os eventos e trabalhos. 
+
+---
+## Integração contínua com GitHub Actions
+
+Para utilizar o GitHub Actions, usamos arquivos `.yaml` que armazenam informações os fluxos de trabalho.
+
+- **Eventos**: Um evento é uma atividade que aciona um fluxo de trabalho. Por exemplo:
+  
+  - Quando o repositório recebe uma alteração (`on: push`)
+  
+  - Quando um Pull Request é criado (em outras palavras, alguém está enviando uma contribuição para o repositório) (`on: pull_request`)
+  
+  - Eventos programados. Ex: a cada hora, todos os dias, uma vez por semana, uma vez por mês, etc. O site [CronTab](https://crontab.guru/) é muito útil para isso.
+  
+---
+
+## Eventos: Um evento é uma atividade que aciona um fluxo de trabalho. 
+
+&lt;img src="img/explicacao_eventos.png" width="55%" style="display: block; margin: auto;" /&gt;
+
+Diagrama feito utilizando o site [draw.io](https://draw.io).
+  
+---
+## Integração contínua com GitHub Actions
+
+- **Trabalho**: Um evento aciona automaticamente o fluxo de trabalho, que contém um trabalho. Em seguida, o trabalho usa etapas para controlar a ordem em que as ações são executadas. Exemplo de ações executadas:
+  
+  - Executar testes
+  
+  - Executar um script `.R`
+      - Atualizar um relatório `.Rmd`
+      - Checar um pacote
+      - Entre outros
+
+---
+
+## Trabalho: O trabalho usa etapas para controlar a ordem em que as ações são executadas
+
+&lt;img src="img/explicacao_trabalho.png" width="60%" style="display: block; margin: auto;" /&gt;
+
+Diagrama feito utilizando o site [draw.io](https://draw.io).
+
+---
+## Integração contínua com GitHub Actions (cont.)
+
+- Recomendação: partir de um arquivo de workflow já existente, e alterar o que for necessário. 
+
+  - [Neste repositório](https://github.com/r-lib/actions/tree/master/examples#readme), estão disponíveis alguns exemplos de workflows de GitHub Actions que podemos usar com pacotes em R
+
+- Os arquivos `.yaml` devem estar em um diretório específico do pacote:  `pacote/.github/workflows/nome-do-workflow.yaml`
+
+- O pacote {usethis} também pode nos ajudar nisso, com a função `usethis::use_github_action()`. 
+
+---
+name: exemplos
+class: inverse, middle, center
+
+# Exemplos
+
+---
+name: exemplo-check
+
+## Executar a checagem de um pacote em R 
+
+- O pacote {usethis} pode nos ajudar nisso. A função abaixo irá configurar utilizando o código disponível no  [r-lib/actions](https://github.com/r-lib/actions/tree/master/examples#example-workflows), usado para fazer uma checagem simples no pacote:
+
+
+```r
+usethis::use_github_action("check-release")
+```
+
+- Evento: 
+  - Sempre que houver um novo push no repositório
+
+- Trabalho:
+  - Similar ao `devtools::check()`: vai verificar o pacote e também executar todos os testes.  
+
+---
+name: exemplo-automacao
+
+## Automatizar uma tarefa
+
+- Podemos copiar de exemplos que já existem.
+
+- Vamos criar uma tarefa que roda a cada 5 minutos.
+
+- Não quer esperar os pacotes instalarem toda vez? Vamos usar [`{renv}`](https://rstudio.github.io/renv/articles/renv.html)!
+
+---
+name: referencias
+
+## Referências  e materiais para estudo
+
+- [Material do curso de Pacotes](https://curso-r.github.io/main-pacotes/slides/index.html), da [Curso-R](https://curso-r.com/)
+
+
+- [Material sobre como usar Git e GitHub no RStudio](https://beatrizmilz.com/talk/2021-git-e-github-gyn/)
+
+- [Zen do R](https://curso-r.github.io/zen-do-r/), livro em desenvolvimento pela Curso-R.
+
+- [R Packages](https://r-pkgs.org), livro aprofundado sobre desenvolvimento de pacotes.
+
+- [Documentação do GitHub Actions](https://docs.github.com/pt/actions/learn-github-actions/introduction-to-github-actions)
+  
+- [Exemplos de workflows no repositório r-lib/actions](https://github.com/r-lib/actions/tree/master/examples#example-workflows)
+
+---
+class: center
+
+## Agradecemos a atenção!
+
+.pull-left[
+&lt;img src="https://media.giphy.com/media/M9NbzZjAcxq9jS9LZJ/giphy.gif" width="100%" style="display: block; margin: auto;" /&gt;
+
+]
+
+.pull-right[
+
+Lembre-se de enviar as dúvidas no [discourse da Curso-R](https://discourse.curso-r.com/)!
+
+Slides criados usando os pacotes em R  📦 :
+
+[**xaringan**](https://github.com/yihui/xaringan)&lt;br&gt;
+[gadenbuie/xaringanthemer](https://github.com/gadenbuie/xaringanthemer)
+
+O chakra vem da biblioteca javascript [remark.js](https://remarkjs.com), e os pacotes  [**knitr**](http://yihui.name/knitr), e [R Markdown](https://rmarkdown.rstudio.com).
+
+
+]
+ 
+&lt;!-- inicio font awesome --&gt;
+&lt;script src="https://kit.fontawesome.com/1f72d6921a.js" crossorigin="anonymous"&gt;&lt;/script&gt;
+
+&lt;!-- final font awesome --&gt;
+
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script>var slideshow = remark.create({
+"highlightStyle": "github",
+"highlightLines": true,
+"countIncrementalSlides": false,
+"ratio": "16:9",
+"slideNumberFormat": "<a href='#sumario'>Page</a> - %current%/%total%"
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+(function() {
+  "use strict"
+  // Replace <script> tags in slides area to make them executable
+  var scripts = document.querySelectorAll(
+    '.remark-slides-area .remark-slide-container script'
+  );
+  if (!scripts.length) return;
+  for (var i = 0; i < scripts.length; i++) {
+    var s = document.createElement('script');
+    var code = document.createTextNode(scripts[i].textContent);
+    s.appendChild(code);
+    var scriptAttrs = scripts[i].attributes;
+    for (var j = 0; j < scriptAttrs.length; j++) {
+      s.setAttribute(scriptAttrs[j].name, scriptAttrs[j].value);
+    }
+    scripts[i].parentElement.replaceChild(s, scripts[i]);
+  }
+})();
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+// adds .remark-code-has-line-highlighted class to <pre> parent elements
+// of code chunks containing highlighted lines with class .remark-code-line-highlighted
+(function(d) {
+  const hlines = d.querySelectorAll('.remark-code-line-highlighted');
+  const preParents = [];
+  const findPreParent = function(line, p = 0) {
+    if (p > 1) return null; // traverse up no further than grandparent
+    const el = line.parentElement;
+    return el.tagName === "PRE" ? el : findPreParent(el, ++p);
+  };
+
+  for (let line of hlines) {
+    let pre = findPreParent(line);
+    if (pre && !preParents.includes(pre)) preParents.push(pre);
+  }
+  preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
+})(document);</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>
