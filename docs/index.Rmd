@@ -113,23 +113,16 @@ knitr::include_graphics("img/LULC_products.png")
 
 ---
 ## Motivation 
-### But there are few products of time series that cover historical and future. Besides, the format in which these few data are available ( NetCDF) seems to discourage their use.
+##### But there are few products of time series that cover historical and future. 
+--
+```{r echo=FALSE, fig.align='center', out.width="90%"}
+knitr::include_graphics("img/Luh2_GCAM.png")
+```
 --
 
-> Luh2
-
-> GCAM-Demeter
-
-##  
-
---
-
-#### But...
-#### Netcdf
-
+Besides, the format in which these few data are available ( NetCDF) seems to discourage their use.
 ---
-
-### Goal
+## Goal
 
 #### Make the LUh2 more acessible (particulaly for ecoloist and biogeographer) 
 
@@ -255,14 +248,14 @@ Criando um projeto, o RStudio criará na pasta escolhida um arquivo `nome-do-pro
 ### RStudio com um projeto aberto
 
 ```{r echo=FALSE, fig.align='center', out.width="80%"}
-knitr::include_graphics(rep("img/exemplo-projeto-aberto.png"))
+#knitr::include_graphics(rep("img/exemplo-projeto-aberto.png"))
 ```
 
 ---
 ### Navegando entre projetos
 
 ```{r echo=FALSE, fig.align='center', out.width="80%"}
-knitr::include_graphics(rep("img/exemplo-lista-projetos.png"))
+#knitr::include_graphics(rep("img/exemplo-lista-projetos.png"))
 ```
 
 
@@ -435,7 +428,7 @@ knitr::include_graphics("https://git-scm.com/images/logo@2x.png")
 - [GitHub percente à Microsoft desde 2018](https://g1.globo.com/economia/tecnologia/noticia/microsoft-compra-github-por-us-75-bilhoes.ghtml).
 
 ```{r echo=FALSE, out.width="30%"}
-knitr::include_graphics("img/github.png")
+#knitr::include_graphics("img/github.png")
 ```
 
 ---
@@ -540,7 +533,7 @@ em um **servidor do GitHub** e executa os comandos especificados
 <!-- - Os arquivos .yaml que armazenam informações os fluxos de trabalho, onde estão descritos os eventos e trabalhos. -->
 
 ```{r echo=FALSE, fig.align='center', out.width="45%"}
-knitr::include_graphics("img/explicacao_workflows.png")
+#knitr::include_graphics("img/explicacao_workflows.png")
 ```
 
 Diagrama feito utilizando o site [draw.io](https://draw.io)  e [Carbon](https://carbon.now.sh/). Código de [r-lib/actions](https://github.com/r-lib/actions/tree/master/examples#quickstart-ci-workflow).
@@ -567,7 +560,7 @@ Para utilizar o GitHub Actions, usamos arquivos `.yaml` que armazenam informaç�
 ## Eventos: Um evento é uma atividade que aciona um fluxo de trabalho. 
 
 ```{r echo=FALSE, fig.align='center', out.width="55%"}
-knitr::include_graphics("img/explicacao_eventos.png")
+#knitr::include_graphics("img/explicacao_eventos.png")
 ```
 
 Diagrama feito utilizando o site [draw.io](https://draw.io).
@@ -589,7 +582,7 @@ Diagrama feito utilizando o site [draw.io](https://draw.io).
 ## Trabalho: O trabalho usa etapas para controlar a ordem em que as ações são executadas
 
 ```{r echo=FALSE, fig.align='center', out.width="60%"}
-knitr::include_graphics("img/explicacao_trabalho.png")
+#knitr::include_graphics("img/explicacao_trabalho.png")
 ```
 
 Diagrama feito utilizando o site [draw.io](https://draw.io).
