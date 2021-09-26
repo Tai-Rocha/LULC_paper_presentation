@@ -79,8 +79,9 @@ knitr::include_graphics(rep("img/paper.png"))
 - Motivation
 - Goals
 - Methods
-- Main results and conclusion
-]
+- Main results
+- Limitation and conclusion
+
 
 ---
 ## Motivation
@@ -104,11 +105,17 @@ Mapping land-use land-cover (LULC) changes through time is important and desirab
 
 ---
 ## Motivation
-##### Many products. But there is gap of time series that covers... . 
+##### There are many LULC products.
+```{r echo=FALSE, fig.align='center', out.width="90%"}
+knitr::include_graphics("img/LULC_products.png")
+```
+
 
 ---
 ## Motivation 
-#### Fell products ... Just two cover a large time series
+### But there are few products of time series that cover historical and future. Besides, the format in which these few data are available ( NetCDF) seems to discourage their use.
+--
+
 > Luh2
 
 > GCAM-Demeter
