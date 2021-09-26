@@ -35,51 +35,97 @@ About me 👩‍🎓
  - [Biologist](#academic_1) [UFPA](https://portal.ufpa.br/) 
  - [MSc. Environmental biology](academic_2) [IECOS](https://www.museu-goeldi.br/)
  - [PhD Zoology](academic_3) [MPEG](https://www.museu-goeldi.br/)
-<br>
-<br>
-<br>
 
 --
-> ## ... Biodiversity distribution patterns
+<br>
+<br>
+<br>
+<br>
+
+## Biodiversity distribution patterns
+
 ---
-name: sumario
-
-## Land-use land-cover (LULC)
-
-```{r echo=FALSE, fig.align='center', out.width="80%"}
-knitr::include_graphics(rep("img/paper.png"))
+.right-column[
+```{r echo=FALSE, fig.align='right', out.width="60%"}
+knitr::include_graphics(rep("img/spatia_ana_2.png"))
 ```
----
-## Land-use land-cover (LULC)
-- [Important predictors of species occurrence](#pre-requisitos)
+]
 
-- [One of the main drivers of environmental change at multiple scales](#projetos-rstudio)
+About me 👩‍🎓
+ - [Biologist](#academic_1) [UFPA](https://portal.ufpa.br/) 
+ - [MSc. Environmental biology](academic_2) [IECOS](https://www.museu-goeldi.br/)
+ - [PhD Zoology](academic_3) [MPEG](https://www.museu-goeldi.br/)
 
---
-## Thus...
-Mapping land-use land-cover (LULC) changes through time is, therefore, important and desirable to predict these threats and propose effec tive conservation policies
----
+### Biodiversity distribution patterns
 
----
-name: sumario
+### Spatial analasyis of biodivesity and global changes
 
-## Land-use land-cover (LULC)
-- [Ecological niche models (as predictor or pos processing analysis)](#pre-requisitos)
+> Ecological Niche Models 
 
-- [Ecosystem services (InVEST modeling tool)](#projetos-rstudio)
+> Climate data
+
+> Land-use and land-cover data📌
+
 ---
 class: middle
 
-## LULC Datsets 
+name: sumario
 
-> ### ... Many products. But there is gap of time series that covers... . 
+## Land-use land-cover (LULC)
+```{r echo=FALSE, fig.align='center', out.width="70%"}
+knitr::include_graphics(rep("img/paper.png"))
+```
+.pull-center[
+- Motivation
+- Goals
+- Methods
+- Main results and conclusion
+]
+
+---
+## Motivation
+## LULCs
+
+- Important predictors of species occurrence
+
+- One of the main drivers of environmental change at multiple scales
+
+- Ecological niche models (as predictor or pos processing analysis)
+
+- Ecosystem services (InVEST modeling tool)
+
 --
 
-#### É a coisa mais útil/interessante que eu (Bea) aprendi nos últimos meses 🚀
+## Thus...
+Mapping land-use land-cover (LULC) changes through time is, therefore, important and desirable to predict these threats and propose effective conservation policies
+
+---
+## Motivation
+##### Many products. But there is gap of time series that covers... . 
+
+---
+## Motivation 
+#### Fell products ... Just two cover a large time series
+> Luh2
+
+> GCAM-Demeter
+
+##  
 
 --
 
-#### Desde que aprendi eu (Julio) uso em quase todos os projetos 🤖
+#### But...
+#### Netcdf
+
+---
+
+### Goal
+
+#### Make the LUh2 more acessible (particulaly for ecoloist and biogeographer) 
+
+#### Derive a new categorical data  (ecossystem servise) 🚀
+
+ 🤖
 
 ---
 
