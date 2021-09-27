@@ -87,26 +87,26 @@ knitr::include_graphics(rep("img/paper.png"))
 ## Motivation
 ## Land-use land-cover
 
-- Important predictor of anthropogenic impacts and biodiversity threats (Gomes et al. 2020, 2021; Rosa et al. 2021)
+- Important predictor of anthropogenic impacts and biodiversity threats (Gomes et al. 2020, 2021; Rosa et al. 2021).
 
-- One of the main drivers of environmental change at multiple scales (Gomes et al. 2020, 2021; Rosa et al. 2021)
+- One of the main drivers of environmental change at multiple scales (Gomes et al. 2020, 2021; Rosa et al. 2021).
 --
 
-- Ecological niche models, as predictor or pos processing analysis 📌 (Eyringet al. 2016; Ruiz-Benito et al.
+- Ecological niche models, as predictor or pos processing analysis. 📌 (Eyringet al. 2016; Ruiz-Benito et al.
 2020; Sobral-Souza et al. 2021)
 
-- Ecosystem services as InVEST modeling tool (Sharp et al.2020)📌
+- Ecosystem services as InVEST modeling tool (Sharp et al.2020).📌
 
 --
 
 ## Thus...
 
-Mapping land-use land-cover (LULC) changes through time is important and desirable for different purposes studies (Mantyka-Pringle et al. 2015; Titeux et al. 2017; Newbold 2018; Clerici et al. 2019; Hong et al. 2019; Jetz et al 2007; Powers and Jetz 201
+Mapping land-use land-cover (LULC) changes through time is important and desirable for different purposes studies (Mantyka-Pringle et al. 2015; Titeux et al. 2017; Newbold 2018; Clerici et al. 2019; Hong et al. 2019; Jetz et al 2007; Powers and Jetz 2019).
 
 ---
 ## Motivation
 ##### There are many LULC products.
-```{r echo=FALSE, fig.align='center', out.width="90%"}
+```{r echo=FALSE, fig.align='center', out.width="80%"}
 knitr::include_graphics("img/LULC_products.png")
 ```
 
@@ -119,19 +119,37 @@ knitr::include_graphics("img/LULC_products.png")
 knitr::include_graphics("img/Luh2_GCAM.png")
 ```
 --
+Besides, the format in which these few data are available (NetCDF) seems to discourage their use.
 
-Besides, the format in which these few data are available ( NetCDF) seems to discourage their use.
+---
+
+## Motivation 
+```{r echo=FALSE, fig.align='center', out.width="50%"}
+knitr::include_graphics("img/Xia and Yu, 2020.png")
+```
+---
+## Motivation 
+```{r echo=FALSE, fig.align='center', out.width="70%"}
+knitr::include_graphics("img/climate_data.png")
+```
+
+- .tif or .asc format is usually required as input for ecology and biogeography analysis.
 ---
 ## Goal
 
-#### Make the LUh2 more acessible (particulaly for ecoloist and biogeographer) 
+- Make the LUH2 more accessible and in the format required for ecology and biogeography analysis.  
 
-#### Derive a new categorical data  (ecossystem servise) 🚀
+- Derive a new categorical data (LULC) from LUH2 (Land-use)*
+
+---
+
+## Methods
+
+🚀
 
  🤖
 
 ---
-
 
 .pull-left[
 
@@ -160,8 +178,6 @@ Besides, the format in which these few data are available ( NetCDF) seems to dis
 
 - [Material sobre como usar Git e GitHub no RStudio](https://beatrizmilz.com/talk/2021-git-e-github-gyn/)
 ]
-
-
 
 ---
 name: pre-requisitos
