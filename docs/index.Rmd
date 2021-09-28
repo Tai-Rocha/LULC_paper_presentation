@@ -1,7 +1,7 @@
 ---
 title: "Global land-use and land-cover (LULC) data"
 subtitle: "Tainá Rocha"
-author: "<img src = 'https://github.com/Tai-Rocha/tainaweb_en/raw/main/content/talk/LULC%20data/featured.jpg' width = '30%'> <br> "
+author: "<img src = 'https://github.com/Tai-Rocha/tainaweb_en/raw/main/content/talk/LULC%20data/featured.jpg' width = '50%'> <br> "
 date: "`r paste(lubridate::month(Sys.Date(), label = TRUE, abbr = FALSE), lubridate::year(Sys.Date()))`"
 output:
   xaringan::moon_reader:
@@ -12,7 +12,7 @@ output:
       highlightLines: true
       countIncrementalSlides: false
       ratio: "16:9"
-      slideNumberFormat: "<a href='#sumario'>Page</a> - %current%/%total%" 
+      slideNumberFormat: "<a href='#sumario'>Slide</a> - %current%/%total%" 
 ---
 
 ```{r setup, include=FALSE}
