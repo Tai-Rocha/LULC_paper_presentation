@@ -92,7 +92,7 @@ knitr::include_graphics(rep("img/paper.png"))
 - One of the main drivers of environmental change at multiple scales (Gomes et al. 2020, 2021; Rosa et al. 2021).
 --
 
-- Ecosystem services as InVEST modeling tool (Sharp et al.2020).📌
+- Ecosystem services ( InVEST modeling tool, Sharp et al.2020).📌
 
 - Ecological niche models, as predictor or pos processing analysis. 📌 (Eyringet al. 2016; Ruiz-Benito et al.
 2020; Sobral-Souza et al. 2021)
@@ -115,13 +115,12 @@ knitr::include_graphics("img/LULC_products.png")
 
 ---
 ## Motivation 
-##### But there are few products of time series that cover historical and future. 
+##### Today, we have two initiatives that provide a large time-series for Land-use.
 --
-```{r echo=FALSE, fig.align='center', out.width="90%"}
+
+```{r echo=FALSE, fig.align='center', out.width="85%"}
 knitr::include_graphics("img/Luh2_GCAM.png")
 ```
---
-Besides, the format in which these few data are available (NetCDF) seems to discourage their use.
 
 ---
 
@@ -129,6 +128,10 @@ Besides, the format in which these few data are available (NetCDF) seems to disc
 ```{r echo=FALSE, fig.align='center', out.width="50%"}
 knitr::include_graphics("img/Xia and Yu, 2020.png")
 ```
+--
+
+### Besides, the format in which these data are available (NetCDF) seems to discourage their use.
+
 ---
 ## Motivation 
 ```{r echo=FALSE, fig.align='center', out.width="70%"}
@@ -137,7 +140,7 @@ knitr::include_graphics("img/climate_data.png")
 
 - .tif or .asc format is usually required as input for ecology and biogeography analysis.
 ---
-## Goal
+## Goals
 
 - Make the LUH2 more accessible and in the format required for ecology and biogeography analysis.  
 
@@ -147,21 +150,33 @@ knitr::include_graphics("img/climate_data.png")
 
 ## Methods
 
-Land-Use Harmonization (LUH2)
+[Land-Use Harmonization (LUH2)](https://luh.umd.edu/data.shtml)
 
-```{r echo=FALSE, fig.align='center', out.width="50%"}
-knitr::include_graphics("img/Lu_states.png")
+```{r echo=FALSE, fig.align='center', out.width="65%"}
+knitr::include_graphics("img/LU_states.png")
 ```
-- Forested and non-
+- “primary” refers to intact land, undisturbed by human activities since 850.
 
-- Secondary and 
+- “secondary” refers to land undergoing a transition or recovering from previous human activities (Hurrt et al. 2006; 2011; 2020).
 
+- “forested” and “non-forested” are based on the aboveground standing stock of natural cover (> 2 kg/cm-²).
 ---
 
 ## Methods
-```{r echo=FALSE, fig.align='center', out.width="100%"}
+
+### Scenarios: Shared Socioeconomic Paths (SSP) and  Representative Concentration Pathway (RCP) 
+
+```{r echo=FALSE, fig.align='center', out.width="90%"}
+knitr::include_graphics("img/scenarios.png")
+```
+---
+## Methods
+
+```{r echo=FALSE, fig.align='center', out.width="90%"}
 knitr::include_graphics("img/workflow.png")
 ```
+
+
 ---
 ## Main results
 
@@ -199,8 +214,6 @@ knitr::include_graphics("img/Fig4.jpg")
 - The resolution
 
 - Greenland
-
-- Poor accuracy for some categories
 
 ---
 ## Conclusion
