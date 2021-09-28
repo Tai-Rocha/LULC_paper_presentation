@@ -227,4 +227,5 @@ knitr::include_graphics("img/thnks.gif")
 <br>
 <br>
 <br>
+
 Reproduclible slides made with the R packages [xaringan](https://github.com/yihui/xaringan) and [xaringanthemer](https://github.com/gadenbuie/xaringanthemer). Code available at [Github](https://github.com/Tai-Rocha/LULC_paper_presentation.github.io)
