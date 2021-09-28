@@ -15,7 +15,6 @@ output:
       slideNumberFormat: "<a href='#sumario'>Page</a> - %current%/%total%" 
 ---
 
-
 ```{r setup, include=FALSE}
 `%>%` <- magrittr::`%>%`
 
@@ -164,9 +163,9 @@ knitr::include_graphics("img/workflow.png")
 ---
 ## Main results
 
-- States-files (LUH2 original, continuous data) from 850 to 2100 transformed into .tif format (16.056 files).
+- States-files: LUH2 original (continuous data) from 850 to 2100 transformed into .tif format (16.056 files).
 
-- LULC-files, the new categorical data created by combining the 12 States-files
+- LULC-files: the new categorical data created by combining the 12 States-files, also from 850 to 2100 transformed into .tif format (1.338 files)
 <br>
 <br>
 
@@ -184,17 +183,48 @@ knitr::include_graphics("img/results_main.png")
 
 ---
 ## Main results
-
-```{r echo=FALSE, fig.align='center', out.width="100%"}
-knitr::include_graphics("img/table_acu.png")
+.right-colomun[
+No quantitative difference between two scenarios
+]
+.left-colomun[
+```{r echo=FALSE, fig.align='center', out.width="32%"}
+knitr::include_graphics("img/Fig4.jpg")
 ```
+]
 ---
 ## Limitation
 
+- The resolution
+
+- Greenland
+
+- Poor accuracy for some categories
 
 ---
 ## Conclusion
 
+- Forest loss for both scnarios (Fig.4, SSP2-4.5 and SSP5-8.5)
+
+- Conversion from ______ to ______________
+
+--
+
+- The continuous data in the state-files may be particularly useful as predictors in ecological niche modeling (Peterson et al. 2011) or can be combined to species distribution models to reconstruct changes in species distributions (Sofaer et al. 2019; Cazaca et al.2020). It allows for the use of land cover data in projections of species distribution under future climate change scenarios.
+
+- LULC-files can be useful in ecosystem services mapping (Invest), in studies of global change impacts from other perspectives and can help decision-makers in the construction of evidence based mitigation and conservation policies.
 
 ---
 
+class: center
+# Thanks !
+
+```{r echo=FALSE, fig.align='center', out.width="32%"}
+knitr::include_graphics("img/thnks.gif")
+```
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+Slides made with the R packages [xaringan](https://github.com/yihui/xaringan) and [xaringanthemer](https://github.com/gadenbuie/xaringanthemer). Code available at [Github](https://github.com/Tai-Rocha/LULC_paper_presentation.github.io)
