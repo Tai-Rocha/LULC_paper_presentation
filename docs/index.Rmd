@@ -185,12 +185,12 @@ knitr::include_graphics("img/workflow.png")
 - States-files: LUH2 original data (continuous data) from years 850 to 2100 transformed into .tif format (16.056 files)
 
 - LULC-files: the new categorical data created by combining the 12 States-files, also from 850 to 2100 transformed into .tif format (1.338 files)
-<br>
-<br>
 
 - The data will be freely available at [ecoclimate](https://www.ecoclimate.org/) but is [available here](https://drive.google.com/drive/u/0/folders/1CTax7OVdFPwnOcv_v36bF-cO7V-RZmwq) for a while
 --
-
+<br>
+<br>
+<br>
 ```{r echo=FALSE, fig.align='center', out.width="90%"}
 knitr::include_graphics("img/table_acu.png")
 ```
