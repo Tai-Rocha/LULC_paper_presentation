@@ -79,7 +79,8 @@ knitr::include_graphics(rep("img/paper.png"))
  Motivation <br>
  Goals <br>
  Methods <br>
- Main results (and limitation) <br>
+ Results/ Main findings  <br>
+ Limitation <br>
  Conclusion
 
 
@@ -121,6 +122,7 @@ knitr::include_graphics("img/LULC_products.png")
 ```{r echo=FALSE, fig.align='center', out.width="85%"}
 knitr::include_graphics("img/Luh2_GCAM.png")
 ```
+LUH is part of CMIP, primary source in the reports of the Intergovernmental Panel on Climate Change (IPCC)
 
 ---
 
@@ -144,13 +146,17 @@ knitr::include_graphics("img/climate_data.png")
 
 - Make the LUH2 more accessible and in the format required for ecology and biogeography analysis.  
 
-- Derive a new categorical data (LULC) from LUH2 (Land-use)*
+- Derive a new categorical data (LULC) from LUH2 (Land-use)
+
+```{r echo=FALSE, fig.align='center', out.width="75%"}
+knitr::include_graphics(rep("img/paper.png"))
+```
 
 ---
 
 ## Methods
 
-[Land-Use Harmonization (LUH2)](https://luh.umd.edu/data.shtml)
+[Land-Use Harmonization (LUH2)- CMIP6](https://luh.umd.edu/data.shtml)
 
 ```{r echo=FALSE, fig.align='center', out.width="65%"}
 knitr::include_graphics("img/LU_states.png")
@@ -162,11 +168,10 @@ knitr::include_graphics("img/LU_states.png")
 - “forested” and “non-forested” are based on the aboveground standing stock of natural cover (> 2 kg/cm-²).
 ---
 
-## Methods
+### Methods
+[CMIP6 Scenarios: Shared Socioeconomic Paths (SSP) and  Representative Concentration Pathway (RCP)](https://www.carbonbrief.org/explainer-how-shared-socioeconomic-pathways-explore-future-climate-change)
 
-### Scenarios: Shared Socioeconomic Paths (SSP) and  Representative Concentration Pathway (RCP) 
-
-```{r echo=FALSE, fig.align='center', out.width="90%"}
+```{r echo=FALSE, fig.align='center', out.width="54%"}
 knitr::include_graphics("img/scenarios.png")
 ```
 ---
@@ -178,28 +183,27 @@ knitr::include_graphics("img/workflow.png")
 
 
 ---
-## Main results
+## Results/ Main findings
 
-- States-files: LUH2 original (continuous data) from 850 to 2100 transformed into .tif format (16.056 files).
+- States-files: LUH2 original data (continuous data) from years 850 to 2100 transformed into .tif format (16.056 files).
 
 - LULC-files: the new categorical data created by combining the 12 States-files, also from 850 to 2100 transformed into .tif format (1.338 files)
 <br>
 <br>
+--
 
-```{r echo=FALSE, fig.align='center', out.width="70%"}
+```{r echo=FALSE, fig.align='center', out.width="90%"}
 knitr::include_graphics("img/table_acu.png")
 ```
-
 ---
-## Main results
+##  Results/ Main findings
+##### SSP5 RCP8.5
 
 ```{r echo=FALSE, fig.align='center', out.width="100%"}
 knitr::include_graphics("img/results_main.png")
 ```
-
-
 ---
-## Main results
+## Results/ Main findings
 .right-colomun[
 No quantitative difference between two scenarios
 ]
@@ -208,6 +212,16 @@ No quantitative difference between two scenarios
 knitr::include_graphics("img/Fig4.jpg")
 ```
 ]
+---
+##  Results/ Main findings
+
+- Primary forest decrease :habitat loss and asso ciated biodiversity decline, specially of rarer species (Chase et al. 2020; Horta and Santos 2020; Lima et al.2020)
+
+- Others researched reach similar findings (Svensson et al. 2019, Shapiro et al. 2021)
+--
+
+- Brazil: recent governmental actions have promoted deforestation and forest fires (Escobar 2019; 2020; Amigo 2020; Silva et al. 2021; França et al. 2021; Qin et al. 2021; Vale et al. 2021), with record deforestation rates in the Amazon (Junior al. 2021).
+
 ---
 ## Limitation
 
