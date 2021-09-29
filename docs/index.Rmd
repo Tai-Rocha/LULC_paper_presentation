@@ -80,7 +80,7 @@ knitr::include_graphics(rep("img/paper.png"))
  Goals <br>
  Methods <br>
  Results/ Main findings  <br>
- Limitation <br>
+ Limitations <br>
  Conclusions and Perspectives
 
 
