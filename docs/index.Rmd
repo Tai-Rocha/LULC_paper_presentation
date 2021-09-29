@@ -81,7 +81,7 @@ knitr::include_graphics(rep("img/paper.png"))
  Methods <br>
  Results/ Main findings  <br>
  Limitation <br>
- Conclusion
+ Conclusions and Perspectives
 
 
 ---
@@ -197,11 +197,16 @@ knitr::include_graphics("img/table_acu.png")
 ```
 ---
 ##  Results/ Main findings
-##### SSP5 RCP8.5
+##### SSP5-RCP8.5
 
 ```{r echo=FALSE, fig.align='center', out.width="100%"}
 knitr::include_graphics("img/results_main.png")
 ```
+---
+## Results/ Main findings
+- The major concern about primary forest decrease is  habitat loss and biodiversity decline, especially of rare species (Chase et al. 2020; Horta and Santos 2020; Lima et al.2020). Others researched reach similar findings (Svensson et al. 2019, Shapiro et al. 2021).
+
+- Brazil: recent governmental actions have promoted deforestation and forest fires (Escobar 2019; 2020; Amigo 2020; Silva et al. 2021; França et al. 2021; Qin et al. 2021; Vale et al. 2021).
 ---
 ## Results/ Main findings
 .right-colomun[
@@ -212,35 +217,27 @@ No quantitative difference between two scenarios
 knitr::include_graphics("img/Fig4.jpg")
 ```
 ]
----
-##  Results/ Main findings
-
-- Primary forest decrease :habitat loss and asso ciated biodiversity decline, specially of rarer species (Chase et al. 2020; Horta and Santos 2020; Lima et al.2020)
-
-- Others researched reach similar findings (Svensson et al. 2019, Shapiro et al. 2021)
---
-
-- Brazil: recent governmental actions have promoted deforestation and forest fires (Escobar 2019; 2020; Amigo 2020; Silva et al. 2021; França et al. 2021; Qin et al. 2021; Vale et al. 2021), with record deforestation rates in the Amazon (Junior al. 2021).
 
 ---
 ## Limitation
 
-- The resolution
+- The resolution (0.25	x	0.25	degree spatial	resolution)*
 
-- Greenland
+- Poor accuracy of urban land for some regions (Afrotropical, Indomalayan, Neotropical)
 
 ---
-## Conclusion
 
-- Forest loss for both scnarios (Fig.4, SSP2-4.5 and SSP5-8.5)
-
-- Conversion from ______ to ______________
-
+## Conclusion and perspectives
+```{r echo=FALSE, fig.align='center', out.width="60%"}
+knitr::include_graphics(rep("img/paper.png"))
+```
 --
+<br>
+<br>
 
-- The continuous data in the state-files may be particularly useful as predictors in ecological niche modeling (Peterson et al. 2011) or can be combined to species distribution models to reconstruct changes in species distributions (Sofaer et al. 2019; Cazaca et al.2020). It allows for the use of land cover data in projections of species distribution under future climate change scenarios.
-
-- LULC-files can be useful in ecosystem services mapping (Invest), in studies of global change impacts from other perspectives and can help decision-makers in the construction of evidence based mitigation and conservation policies.
+- We provide the Land-use Harmonization data in a more friendly format <br>
+- New data <br>
+- We hope that the dataset provided here can be useful for different studies 
 
 ---
 
