@@ -112,8 +112,6 @@ Mapping land-use land-cover (LULC) changes through time is important and desirab
 ```{r echo=FALSE, fig.align='center', out.width="80%"}
 knitr::include_graphics("img/LULC_products.png")
 ```
-
-
 ---
 ## Motivation 
 ##### Today, we have two initiatives that provide a large time-series for Land-use
@@ -177,7 +175,7 @@ knitr::include_graphics("img/scenarios.png")
 ---
 ## Methods
 
-```{r echo=FALSE, fig.align='center', out.width="90%"}
+```{r echo=FALSE, fig.align='center', out.width="85%"}
 knitr::include_graphics("img/workflow.png")
 ```
 [All codes are available at Github](https://github.com/Tai-Rocha/LUH2_Data)
