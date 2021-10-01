@@ -255,4 +255,4 @@ knitr::include_graphics("img/thnks.gif")
 <br>
 <br>
 
-Reproduclible slides made with the R packages [xaringan](https://github.com/yihui/xaringan) and [xaringanthemer](https://github.com/gadenbuie/xaringanthemer) <br> Link: https://tai-rocha.github.io/LULC_paper_presentation.github.io/ <br> Code available at [Github](https://github.com/Tai-Rocha/LULC_paper_presentation.github.io)
+Reproduclible slides made with the R packages [xaringan](https://github.com/yihui/xaringan) and [xaringanthemer](https://github.com/gadenbuie/xaringanthemer) <br> Slides link: https://tai-rocha.github.io/LULC_paper_presentation.github.io/ <br> Code available at [Github](https://github.com/Tai-Rocha/LULC_paper_presentation.github.io)
